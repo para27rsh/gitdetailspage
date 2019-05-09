@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.base {
+  width: 100%;
+  height: auto;
+}
+.dataHolder {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: auto;
+}
+.dataCardHolder {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: 25%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  cursor: pointer;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+  border-radius: 50%;
+  border: 5px solid #ebebde;
+  padding: 10px;
+  overflow: hidden;
+  background: #ebebde;
+}
+.label {
+  width: 100%;
+  height: auto;
+  color: #000;
+  font-size: 20px;
+  text-align: center;
+  font-style: italic;
+  font-family: sans-serif;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+.searchHeading {
+  width: 100%;
+  height: auto;
+  margin: 10px 0px 20px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.searchLabel {
+  width: 100%;
+  height: auto;
+  color: #000;
+  font-size: 30px;
+  font-family: sans-serif;
+  margin-bottom: 15px;
+  display: flex;
+}
+.searchInputHolder {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.inputBox {
+  width: auto;
+  display: flex;
+  height: auto;
+}
+.input {
+  width: 300px;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  padding: 0px 10px;
+}
+.buttonHolder {
+  width: auto;
+  height: 35px;
+  background: #ff1744;
+  padding: 0px 15px;
+  border-radius: 2px;
+  margin-left: 10px;
+  display: flex;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  line-height: 35px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+.notFound {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: #f15228;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
