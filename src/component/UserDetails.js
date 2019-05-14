@@ -15,26 +15,32 @@ export default class UserDetails extends Component {
     window.open(val);
   };
   render() {
-    console.log(this.props.userRepoDetails);
+    console.log(this.props);
     const image =
       this.props &&
       this.props.userRepoDetails &&
-      this.props.userRepoDetails[0] &&
-      this.props.userRepoDetails[0].owner &&
-      this.props.userRepoDetails[0].owner.avatar_url;
+      this.props.userRepoDetails.repoDetails &&
+      this.props.userRepoDetails.repoDetails[0] &&
+      this.props.userRepoDetails.repoDetails[0].owner &&
+      this.props.userRepoDetails.repoDetails[0].owner.avatar_url;
+
     const name =
       this.props &&
       this.props.userRepoDetails &&
-      this.props.userRepoDetails[0] &&
-      this.props.userRepoDetails[0].owner &&
-      this.props.userRepoDetails[0].owner.login;
+      this.props.userRepoDetails.repoDetails &&
+      this.props.userRepoDetails.repoDetails[0] &&
+      this.props.userRepoDetails.repoDetails[0].owner &&
+      this.props.userRepoDetails.repoDetails[0].owner.login;
     return (
       <React.Fragment>
-        {this.props && this.props.loader && <Loader />}
+        {this.props &&
+          this.props.userRepoDetails &&
+          this.props.userRepoDetails.repoLoader && <Loader />}
         <div className={styles.base}>
           {this.props &&
           this.props.userRepoDetails &&
-          this.props.userRepoDetails.length > 0 ? (
+          this.props.userRepoDetails.repoDetails &&
+          this.props.userRepoDetails.repoDetails.length > 0 ? (
             <div className={styles.detailsHolder}>
               <div className={styles.descriptionHolder}>
                 <div className={styles.imageAndName}>
@@ -43,12 +49,14 @@ export default class UserDetails extends Component {
                       <img src={image} alt="" />
                     </div>
                   )}
+
                   <div className={styles.nameOfUser}>{name}</div>
                 </div>
                 <div className={styles.dataAndLink}>
                   {this.props &&
                     this.props.userRepoDetails &&
-                    this.props.userRepoDetails.map((val, i) => {
+                    this.props.userRepoDetails.repoDetails &&
+                    this.props.userRepoDetails.repoDetails.map((val, i) => {
                       return (
                         <div
                           className={styles.repoAndLink}

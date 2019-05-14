@@ -5,9 +5,7 @@ const user = (
     loading: false,
     error: null,
     userDetails: null,
-    repoDetails: null,
     user: null,
-    repoLoader: false
   },
   action
 ) => {
@@ -39,21 +37,6 @@ const user = (
         loading: false
       });
     case userAction.SEARCH_USERS_FAILURE:
-      return Object.assign({}, state, {
-        error: action.error
-      });
-    case userAction.USERS_REPO_REQUEST:
-      return Object.assign({}, state, {
-        status: action.status,
-        repoLoader: true
-      });
-    case userAction.USERS_REPO_SUCCESS:
-      return Object.assign({}, state, {
-        repoDetails: action.userDetails,
-        status: action.status,
-        repoLoader: false
-      });
-    case userAction.USERS_REPO_FAILURE:
       return Object.assign({}, state, {
         error: action.error
       });

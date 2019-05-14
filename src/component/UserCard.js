@@ -39,7 +39,6 @@ export default class UserCard extends Component {
           this.props.userData &&
           this.props.userData.userDetails &&
           this.props.userData.userDetails.slice(0, 10);
-    console.log(this.props);
     return (
       <React.Fragment>
         {this.props && this.props.userData && this.props.userData.loading && (

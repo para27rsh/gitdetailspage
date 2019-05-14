@@ -14,8 +14,9 @@ const mapDispatchToProps = dispatch => {
   };
 };
 const mapStateToProps = state => {
+  console.log("john",state)
   return {
-    userData: state
+    userData: state.userReducer
   };
 };
 
