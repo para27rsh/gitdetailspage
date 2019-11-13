@@ -3,9 +3,9 @@ const user = (
   state = {
     status: null,
     loading: false,
-    error: null,
+    value: null,
     userDetails: null,
-    user: null,
+    user: null
   },
   action
 ) => {
@@ -25,21 +25,7 @@ const user = (
       return Object.assign({}, state, {
         error: action.error
       });
-    case userAction.SEARCH_USERS_REQUEST:
-      return Object.assign({}, state, {
-        status: action.status,
-        loading: true
-      });
-    case userAction.SEARCH_USERS_SUCCESS:
-      return Object.assign({}, state, {
-        user: action.userDetails && action.userDetails.items,
-        status: action.status,
-        loading: false
-      });
-    case userAction.SEARCH_USERS_FAILURE:
-      return Object.assign({}, state, {
-        error: action.error
-      });
+
     default:
       return state;
   }

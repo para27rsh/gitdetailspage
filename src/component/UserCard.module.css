@@ -6,105 +6,215 @@
 .base {
   width: 100%;
   height: auto;
-}
-.dataHolder {
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  margin: auto;
-}
-.dataCardHolder {
-  width: 100%;
-  height: auto;
+  padding: 40px;
   display: flex;
-  flex-wrap: wrap;
 }
-.card {
-  width: 25%;
+
+.leftSectionWrapper {
+  width: 30%;
   height: auto;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  cursor: pointer;
 }
-.card img {
+
+.rightSectionWrapper {
+  width: 70%;
+  height: auto;
+}
+.imageAndName {
+  width: 100%;
+  height: auto;
+}
+.imageHolder {
+  width: 250px;
+  height: 250px;
+}
+.imageHolder img {
   width: 100%;
   height: auto;
   object-fit: fill;
-  border-radius: 50%;
-  border: 5px solid #ebebde;
-  padding: 10px;
-  overflow: hidden;
-  background: #ebebde;
+  border-radius: 5%;
 }
-.label {
+.nameOfUser {
   width: 100%;
   height: auto;
   color: #000;
-  font-size: 20px;
-  text-align: center;
-  font-style: italic;
-  font-family: sans-serif;
-  margin-top: 10px;
-  text-transform: capitalize;
-}
-.searchHeading {
-  width: 100%;
-  height: auto;
-  margin: 10px 0px 20px 0px;
-  display: flex;
-  flex-direction: column;
-}
-.searchLabel {
-  width: 100%;
-  height: auto;
-  color: #000;
+  margin-top: 20px;
   font-size: 30px;
   font-family: sans-serif;
-  margin-bottom: 15px;
-  display: flex;
+  text-align: left;
+  font-weight: bold;
 }
-.searchInputHolder {
+.loginnameOfUser {
   width: 100%;
   height: auto;
+  color: #a8a8a8;
+  margin-top: 5px;
+  font-size: 20px;
+  font-family: sans-serif;
+  text-align: left;
+}
+.bio {
+  width: 100%;
+  height: auto;
+  color: #a8a8a8;
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-align: left;
+}
+.editButton {
+  display: flex;
+  margin-top: 20px;
+  border-bottom: 1px solid #a8a8a8;
+  width: 215px;
+  padding-bottom: 20px;
+}
+.editButton button {
+  padding: 8px 80px 8px 80px;
+  color: #000;
+  font-weight: bold;
+}
+
+.extraInfo {
+  margin-top: 35px;
   display: flex;
 }
+
+.extraInfo img {
+  display: flex;
+}
+
+.extraInfoDetails div:nth-child(1) {
+  margin: 4px 0px 0px 8px;
+}
+.extraInfoDetails div:nth-child(2) {
+  margin: 17px 0px 0px 10px;
+  text-align: left;
+}
+
+.header {
+}
+.header ul {
+  font-family: sans-serif;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #c0c0c0;
+  padding-left: 0;
+}
+.header ul li:hover {
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e36209;
+  color: #09112e;
+  font-weight: bold;
+}
+
+.header ul li {
+  padding-bottom: 18px;
+  list-style: none;
+  width: 15%;
+  margin-top: 50px;
+}
+
+.counter {
+  padding: 2px 5px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  color: #586069;
+  background-color: rgba(27, 31, 35, 0.08);
+  border-radius: 20px;
+  margin-left: 4px;
+}
+
 .inputBox {
   width: auto;
   display: flex;
   height: auto;
+  margin: auto;
+  margin-top: 16px;
 }
 .input {
-  width: 300px;
+  width: 560px;
   height: 35px;
-  border: 1px solid #ccc;
+  border: 1px solid #d1d5da;
   border-radius: 3px;
   outline: none;
   padding: 0px 10px;
 }
-.buttonHolder {
-  width: auto;
+
+.inputOutline {
+  width: 560px;
   height: 35px;
-  background: #ff1744;
-  padding: 0px 15px;
-  border-radius: 2px;
-  margin-left: 10px;
-  display: flex;
-  color: #fff;
-  font-size: 15px;
-  text-align: center;
-  line-height: 35px;
-  font-family: sans-serif;
-  cursor: pointer;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  outline: none;
+  padding: 0px 10px;
+  outline: 5px solid #b3d1f3;
 }
-.notFound {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  color: #f15228;
+.input::placeholder {
+  color: #696969;
+}
+
+.repoListHolder {
+  margin-top: 20px;
+}
+.repoRow {
   font-family: sans-serif;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border-top: 1px solid #eaecef;
+  color: #586069;
+  font-size: 13px;
+}
+.repoRowForked {
+  white-space: nowrap;
+  margin-top: 5px;
+}
+.repoRowLeft {
+  width: 100%;
+  text-align: left;
+}
+.repoRowLeftDescription {
+  margin-top: 5px;
+}
+.repoRowLeftTop {
+  font-size: 20px;
+  color: #0366d6;
   font-weight: bold;
-  font-size: 18px;
+  padding: 5px 0px 5px 0px;
+}
+
+.repoRowLeftBottom div {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.statusCircleInCSS {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #563d7c;
+  display: inline-block;
+  margin-right: 5px;
+}
+.statusCircleInJavaScript {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f1e05a;
+  display: inline-block;
+  margin-right: 5px;
+}
+.statusCircleInHTML {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #e34c26;
+  display: inline-block;
+  margin-right: 5px;
+}
+#udpatedDays {
+  display: flex;
+  margin-top: -8px;
 }

@@ -1,23 +1,19 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { Route } from "react-router";
-import { Switch } from "react-router-dom";
+import Loadable from "react-loadable";
+import Loader from "./component/Loader";
+// import UserCardContainer from "./containers/UserCardContainer";
 
-import UserCardContainer from "./containers/UserCardContainer";
-import UserDetailsContainer from "./containers/UserDetailsContainer";
-
+const UserCardContainer = Loadable({
+  loader: () => import("./containers/UserCardContainer"),
+  loading() {
+    return <Loader />;
+  }
+});
 function App() {
   return (
     <div className="App">
-      <Switch>
-        <Route path="/" component={UserCardContainer} exact />
-        <Route
-          path="/UserDetails/(.*)"
-          component={UserDetailsContainer}
-          exact
-        />
-      </Switch>
+      <UserCardContainer></UserCardContainer>
     </div>
   );
 }
